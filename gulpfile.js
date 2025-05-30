@@ -131,3 +131,5 @@ export const dev = gulp.series(
     gulp.parallel(html, scss, js, img, font),
     gulp.parallel(watch,server)
 );
+
+export default dev;
