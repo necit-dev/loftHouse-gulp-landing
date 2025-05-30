@@ -1,0 +1,56 @@
+body{
+	font-family: $font-main;
+	background-color: $dark;
+	color: $white;
+	font-size: 16px;
+}
+
+a{
+	color: $white;
+	transition: color .2s ease-in;
+	&:hover{
+		color: $accent;
+	}
+	text-decoration: none;
+}
+
+.container{
+	width: 100%;
+	max-width: 1140px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.text-right{
+	text-align: right; 
+}
+
+main{
+	position: relative;	
+}
+
+.title-2{
+	font-size: 36px;
+	font-weight: 700;
+	font-family: $font-accent;
+	color: $accent;
+	@include mediaTablet(){
+		font-size: 28px;
+	}
+}
+
+.link-bold{
+	color: $accent;
+	font-weight: 700;
+	&:hover{
+		color: saturate($color: $accent, $amount: 10%);
+	}
+}
+
+.none{
+	display: none;
+}
+
+.no-scroll{
+	overflow: hidden;
+}

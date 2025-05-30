@@ -1,0 +1,158 @@
+.header{
+	background: linear-gradient(180deg,
+		#242b33 11.98%,
+		rgba(45,52,60, 0.38) 51.04%,
+		#242b33 92.19%),
+		url(../img/bg/intro.jpeg) center no-repeat;
+	background-size: cover;
+	padding: 30px 0 74px;
+
+}
+
+.header__inner{
+	min-height: 840px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	@include mediaTablet(){
+		min-height: auto;
+		gap: 50px;
+	}
+}
+
+.header__top{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__top--mobile{
+	position: fixed;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $dark;
+	z-index: 15; 
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	row-gap: 60px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	.header__nav{
+		display: block;
+	}
+
+	.nav__list{
+		flex-direction: column;
+		align-items: center;
+		row-gap: 30px;
+	}
+	.header__nav-btn{
+		position: fixed;
+		top: 35px;
+		right: 15px;
+	}
+}
+
+
+
+.header__nav{
+	@include mediaTablet(){
+		display: none;
+	}
+}
+
+.header__nav-btn{
+	display: none;
+	@include mediaTablet(){
+		display: block;
+	}
+}
+
+.header__logo{
+	display: block;
+}
+
+.header__logo-up{
+	font-family: $font-title;
+	font-size: 36px;
+	line-height: 1;
+}
+
+.header__logo-down{
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: $font-secondary;
+	letter-spacing: .6px;
+}
+
+.header__middle{
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header__title{
+	text-align: center;
+	font-size: 48px;
+	color: $accent;
+	font-family: $font-accent;
+	font-weight: 700;
+
+	@include mediaTablet(){
+		font-size: 32px;
+	}
+}
+
+.header__mouse{
+	display: block;
+	margin-top: 81px;
+	transition: scale .2s ease;
+	&:hover{
+		scale: 1.1;
+	}
+}
+
+.header__bottom{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 30px;
+	margin-right: 50px;
+	font-family: $font-main;
+	font-size: 18px;
+	@include mediaTablet(){
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 30px;
+	}
+}
+
+.header__map{
+	text-align: right;
+	&>img{
+		margin-top: -3px;
+	}
+}
+
+.header__map, .header__tel{
+	font-size: 14px;
+	padding: 5px;
+	&>img{
+		margin-right: 14px;
+	}
+	@include mediaTablet(){
+		padding-left: 35px;
+	}
+}
+
+.header__tel{
+	margin-left: 45px;
+	@include mediaTablet(){
+		margin-left: 0;
+	}
+}

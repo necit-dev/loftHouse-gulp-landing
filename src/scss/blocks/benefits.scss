@@ -1,0 +1,47 @@
+.benefits{
+	position: relative;
+	overflow: hidden;
+
+
+	&::after{
+		content: "II";
+		top: 0;
+		left: calc(50% + 550px);
+		transform: translate(-50%, 0%);
+		line-height: 0.6;
+		@include decorNumber();
+	}
+}
+
+.benefits__inner{
+	margin: 120px 0;
+	display: flex;
+	justify-content: center;
+	column-gap: 70px;
+	@include mediaTablet(){
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		gap: 52px 52px;
+	}
+}
+
+.benefits__item{
+	text-align: center;
+	& img{
+		@include mediaTablet(){
+			width: 60px;
+			height: 60px;
+		}
+	}
+}
+
+.benefits__text{
+	margin-top: 51px;
+	font-size: 20px;
+	line-height: 27px;
+	font-family: $font-secondary;
+	@include mediaTablet(){
+		font-size: 16px;
+		margin-top: 20px;
+	}
+}

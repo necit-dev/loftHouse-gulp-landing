@@ -1,0 +1,51 @@
+[class*="copyrights-pane"]{
+	opacity: 0;
+	height: 0;
+	transition: .2s ease;
+
+}
+
+.map:hover [class*="copyrights-pane"]{
+	opacity: 1;
+}
+
+
+/* Balloon styles */
+
+[class*="balloon__layout"], [class*="balloon__content"]{
+	background-color: $dark !important;
+	color: #fff !important;
+}
+
+[class*="balloon__tail"]::after{
+	background-color: $dark !important;
+}
+
+[class*="balloon_layout_panel"]{
+	background-color: $dark !important;
+}
+
+[class*="balloon__layout"], [class*="balloon__content"] a{
+	color: $accent !important;
+	transition: color .2s ease;
+	&:hover{
+		color: saturate($color: $accent, $amount: 25%) !important;
+	}
+}
+
+[class*="islets_card__address"],
+[class*="islets_card__metro-station"],
+[class*="islets_card__status-time-text"]{
+	color: #fff !important;
+}
+[class*="islets_card__metro-station-link"]{
+	color: $accent;
+}
+
+
+[class*="balloon__close-button"]{
+	background: url(../img/cross.svg) 50% no-repeat !important;
+	width: 20px !important; 
+	height: 20px !important;
+	margin: 10px 7px;
+}
